@@ -1,0 +1,28 @@
+digraph "Partitiondisck"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Partitiondisck",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="die struct ,die die Verwaltung einer Partition von Disck"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fat" ,fontname="Helvetica"];
+  Node2 [label="Partitation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_partitation.html",tooltip="BsFatEmulator."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FitArray" ,fontname="Helvetica"];
+  Node3 [label="BsFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_bs_file.html",tooltip="die struct ,die eine Datei Festplatte erstellt"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" StartBlock" ,fontname="Helvetica"];
+  Node4 [label="Block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_block.html",tooltip="die struct ,die die Verwaltung einer Festplatte ueber Bloecke ermoeglich"];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" left\nright" ,fontname="Helvetica"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pblocks" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inode" ,fontname="Helvetica"];
+  Node5 [label="IPartition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_i_partition.html",tooltip="die struct ,die die Verwaltung einer Partition ueber InodeBloecke ermoeglich"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Files" ,fontname="Helvetica"];
+  Node6 [label="InodeFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_inode_file.html",tooltip="die struct ,die die Verwaltung einer Festplatte ueber Bloecke ermoeglich"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" indirect" ,fontname="Helvetica"];
+  Node7 [label="indirectBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structindirect_block.html",tooltip="indirect Zeiger auf 128 Blocks"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" indirect" ,fontname="Helvetica"];
+  Node8 [label="InodeBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_inode_block.html",tooltip="die struct ,die die Verwaltung einer Festplatte ueber InodeBloecke ermoeglich"];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nextFile" ,fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" direct" ,fontname="Helvetica"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" blocks" ,fontname="Helvetica"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" superblock" ,fontname="Helvetica"];
+  Node9 [label="Superblock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_superblock.html",tooltip="die struct erstellt die magicNumber und numberOfBlocks usf disck"];
+}

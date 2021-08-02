@@ -1,0 +1,99 @@
+\hypertarget{struct_inode_file}{}\doxysection{Inode\+File Struct Reference}
+\label{struct_inode_file}\index{InodeFile@{InodeFile}}
+
+
+die struct ,die die Verwaltung einer Festplatte ueber Bloecke ermoeglich  
+
+
+
+
+{\ttfamily \#include $<$Bs\+Inodes.\+h$>$}
+
+
+
+Collaboration diagram for Inode\+File\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_inode_file_a5ac083a645d964373f022d03df4849c8}{name}}
+\item 
+int \mbox{\hyperlink{struct_inode_file_a439227feff9d7f55384e8780cfc2eb82}{size}}
+\item 
+struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}} $\ast$ \mbox{\hyperlink{struct_inode_file_a310e8b2c20d5ee5ad3da16d8e6b7a415}{direct}} \mbox{[}12\mbox{]}
+\item 
+struct \mbox{\hyperlink{structindirect_block}{indirect\+Block}} $\ast$ \mbox{\hyperlink{struct_inode_file_a4da35c4dc8893d407d65ec8f42d67a8f}{indirect}}
+\item 
+struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}} $\ast$ \mbox{\hyperlink{struct_inode_file_a9a65169e077afb8b23064b2fdf4f5355}{next\+File}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+die struct ,die die Verwaltung einer Festplatte ueber Bloecke ermoeglich 
+
+Variable Index zeiger auf block
+
+Variable Data Info der Datei
+
+Variable State faelle der \mbox{\hyperlink{struct_block}{Block}} 
+
+Definition at line 31 of file Bs\+Inodes.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_inode_file_a310e8b2c20d5ee5ad3da16d8e6b7a415}\label{struct_inode_file_a310e8b2c20d5ee5ad3da16d8e6b7a415}} 
+\index{InodeFile@{InodeFile}!direct@{direct}}
+\index{direct@{direct}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{direct}{direct}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}}$\ast$ direct\mbox{[}12\mbox{]}}
+
+
+
+Definition at line 41 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_inode_file_a4da35c4dc8893d407d65ec8f42d67a8f}\label{struct_inode_file_a4da35c4dc8893d407d65ec8f42d67a8f}} 
+\index{InodeFile@{InodeFile}!indirect@{indirect}}
+\index{indirect@{indirect}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{indirect}{indirect}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structindirect_block}{indirect\+Block}}$\ast$ indirect}
+
+
+
+Definition at line 42 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_inode_file_a5ac083a645d964373f022d03df4849c8}\label{struct_inode_file_a5ac083a645d964373f022d03df4849c8}} 
+\index{InodeFile@{InodeFile}!name@{name}}
+\index{name@{name}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ name}
+
+
+
+Definition at line 39 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_inode_file_a9a65169e077afb8b23064b2fdf4f5355}\label{struct_inode_file_a9a65169e077afb8b23064b2fdf4f5355}} 
+\index{InodeFile@{InodeFile}!nextFile@{nextFile}}
+\index{nextFile@{nextFile}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{nextFile}{nextFile}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}}$\ast$ next\+File}
+
+
+
+Definition at line 43 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_inode_file_a439227feff9d7f55384e8780cfc2eb82}\label{struct_inode_file_a439227feff9d7f55384e8780cfc2eb82}} 
+\index{InodeFile@{InodeFile}!size@{size}}
+\index{size@{size}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int size}
+
+
+
+Definition at line 40 of file Bs\+Inodes.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_bs_inodes_8h}{Bs\+Inodes.\+h}}\end{DoxyCompactItemize}

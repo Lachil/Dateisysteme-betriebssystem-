@@ -1,0 +1,364 @@
+\hypertarget{_bs_fat_emulator_8h}{}\doxysection{Bs\+Fat\+Emulator.\+h File Reference}
+\label{_bs_fat_emulator_8h}\index{BsFatEmulator.h@{BsFatEmulator.h}}
+{\ttfamily \#include \char`\"{}C\+Droom\+Emulator.\+h\char`\"{}}\newline
+Include dependency graph for Bs\+Fat\+Emulator.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_partitation}{Partitation}}
+\begin{DoxyCompactList}\small\item\em Bs\+Fat\+Emulator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_block}{Block}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer Festplatte ueber Bloecke ermoeglich \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_bs_file}{Bs\+File}}
+\begin{DoxyCompactList}\small\item\em die struct ,die eine Datei Festplatte erstellt \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_bs_fat_emulator_8h_a2dcc4653d570b88dd786af4234083a57}{A\+R\+R\+A\+Y\+\_\+\+L\+E\+N\+G\+TH}}~10
+\item 
+\#define \mbox{\hyperlink{_bs_fat_emulator_8h_a9958e549a943ec37c7fbb33685befb02}{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{_bs_fat_emulator_8h_a2b290a57d2211585af93443ed7cf5fa3}{State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a8f19147d715763249aeaf9930e658660}{frei}}, 
+\mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a0bec739090df056e30e3b1b9735f04a1}{R\+E\+S\+E\+R\+V\+I\+E\+RT}}, 
+\mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a995fab8443f238b162dfdb66a1ce247f}{belegt}}, 
+\mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9a8526dff02790da90e4c9c3dae6af65}{defekt}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$ \mbox{\hyperlink{_bs_fat_emulator_8h_a18b2906467c9bd4d8ce655d9fb025623}{Partitionerstellen}} (char $\ast$Pname, unsigned long paritationsize, unsigned int block\+Size)
+\item 
+struct \mbox{\hyperlink{struct_bs_file}{Bs\+File}} $\ast$ \mbox{\hyperlink{_bs_fat_emulator_8h_a442f5bdebf91d98f0144f06fddad6492}{create\+File\+F\+AT}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$Fatdisck, unsigned long size, unsigned char $\ast$name)
+\item 
+unsigned int \mbox{\hyperlink{_bs_fat_emulator_8h_ae07ef8a1ccd9dcfb162835eec8618603}{get\+Free\+Disk\+Space}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$Fatdisck)
+\item 
+unsigned int \mbox{\hyperlink{_bs_fat_emulator_8h_a3eead2ec268bdc8aba960d9e70930af1}{get\+Index\+Of\+Free\+Block}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$Part)
+\item 
+void \mbox{\hyperlink{_bs_fat_emulator_8h_aeb613776ac80a9eab54d0cd8a7b55734}{get\+Fragmentation}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$p\+Fat)
+\item 
+int \mbox{\hyperlink{_bs_fat_emulator_8h_ac13d555989b1eb0d904c7d640c77d4bb}{get\+File\+Owner\+Of\+Block}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$bs\+Fat, int block\+Index)
+\item 
+struct \mbox{\hyperlink{struct_block}{Block}} $\ast$ \mbox{\hyperlink{_bs_fat_emulator_8h_ae0363a2d8082254fd3e3434afbdccfa2}{get\+Cluster\+By\+Block\+Index}} (struct \mbox{\hyperlink{struct_bs_file}{Bs\+File}} $\ast$file, unsigned int index)
+\item 
+void \mbox{\hyperlink{_bs_fat_emulator_8h_a15de9e1c7e2f804eecb2851bd4a07b49}{defrag\+Disk}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$bs\+Fat)
+\item 
+void \mbox{\hyperlink{_bs_fat_emulator_8h_ab663f76031b51ba79078bf64f406ce47}{delete\+File\+Fat}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$p\+Fat, char $\ast$file\+Name)
+\item 
+void \mbox{\hyperlink{_bs_fat_emulator_8h_a273744ba1a75d66d2f9993689ac926c7}{sfs\+\_\+ls}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$p\+Fat, unsigned int \mbox{\hyperlink{main_8c_a94c59d86008a099cc483d80ca89482f6}{File\+\_\+\+Max\+\_\+\+F\+AT}})
+\item 
+void \mbox{\hyperlink{_bs_fat_emulator_8h_ab1ce579feaa67604eb966c96518d4289}{C\+D\+\_\+\+F\+AT}} (struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$p\+Fat, struct \mbox{\hyperlink{struct_c_d}{CD}} $\ast$cd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a2dcc4653d570b88dd786af4234083a57}\label{_bs_fat_emulator_8h_a2dcc4653d570b88dd786af4234083a57}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!ARRAY\_LENGTH@{ARRAY\_LENGTH}}
+\index{ARRAY\_LENGTH@{ARRAY\_LENGTH}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_LENGTH}{ARRAY\_LENGTH}}
+{\footnotesize\ttfamily \#define A\+R\+R\+A\+Y\+\_\+\+L\+E\+N\+G\+TH~10}
+
+
+
+Definition at line 4 of file Bs\+Fat\+Emulator.\+h.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a9958e549a943ec37c7fbb33685befb02}\label{_bs_fat_emulator_8h_a9958e549a943ec37c7fbb33685befb02}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!MAX\_FILE\_NAME\_LENGTH@{MAX\_FILE\_NAME\_LENGTH}}
+\index{MAX\_FILE\_NAME\_LENGTH@{MAX\_FILE\_NAME\_LENGTH}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_FILE\_NAME\_LENGTH}{MAX\_FILE\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH~10}
+
+
+
+Definition at line 5 of file Bs\+Fat\+Emulator.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a2b290a57d2211585af93443ed7cf5fa3}\label{_bs_fat_emulator_8h_a2b290a57d2211585af93443ed7cf5fa3}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!State@{State}}
+\index{State@{State}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!State@{State}}
+\index{State@{State}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{frei@{frei}!BsFatEmulator.h@{BsFatEmulator.h}}\index{BsFatEmulator.h@{BsFatEmulator.h}!frei@{frei}}}\mbox{\Hypertarget{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a8f19147d715763249aeaf9930e658660}\label{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a8f19147d715763249aeaf9930e658660}} 
+frei&enum Frei Platz ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESERVIERT@{RESERVIERT}!BsFatEmulator.h@{BsFatEmulator.h}}\index{BsFatEmulator.h@{BsFatEmulator.h}!RESERVIERT@{RESERVIERT}}}\mbox{\Hypertarget{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a0bec739090df056e30e3b1b9735f04a1}\label{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a0bec739090df056e30e3b1b9735f04a1}} 
+R\+E\+S\+E\+R\+V\+I\+E\+RT&enum Frei ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{belegt@{belegt}!BsFatEmulator.h@{BsFatEmulator.h}}\index{BsFatEmulator.h@{BsFatEmulator.h}!belegt@{belegt}}}\mbox{\Hypertarget{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a995fab8443f238b162dfdb66a1ce247f}\label{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a995fab8443f238b162dfdb66a1ce247f}} 
+belegt&enum belegt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{defekt@{defekt}!BsFatEmulator.h@{BsFatEmulator.h}}\index{BsFatEmulator.h@{BsFatEmulator.h}!defekt@{defekt}}}\mbox{\Hypertarget{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9a8526dff02790da90e4c9c3dae6af65}\label{_bs_fat_emulator_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9a8526dff02790da90e4c9c3dae6af65}} 
+defekt&enum defekt ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 36 of file Bs\+Fat\+Emulator.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_bs_fat_emulator_8h_ab1ce579feaa67604eb966c96518d4289}\label{_bs_fat_emulator_8h_ab1ce579feaa67604eb966c96518d4289}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!CD\_FAT@{CD\_FAT}}
+\index{CD\_FAT@{CD\_FAT}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{CD\_FAT()}{CD\_FAT()}}
+{\footnotesize\ttfamily void C\+D\+\_\+\+F\+AT (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{p\+Fat,  }\item[{struct \mbox{\hyperlink{struct_c_d}{CD}} $\ast$}]{cd }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_ab1ce579feaa67604eb966c96518d4289}{C\+D\+\_\+\+F\+A\+T()}}  es wurde alle Datei von \mbox{\hyperlink{struct_c_d}{CD}} nach \mbox{\hyperlink{struct_partitation}{Partitation}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}{F\+AT}} koppieren 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Fat} & Fat \mbox{\hyperlink{struct_partitation}{Partitation}} \\
+\hline
+{\em Zahle} & der Datei ,der schon erstellt wurde\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 341 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a442f5bdebf91d98f0144f06fddad6492}\label{_bs_fat_emulator_8h_a442f5bdebf91d98f0144f06fddad6492}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!createFileFAT@{createFileFAT}}
+\index{createFileFAT@{createFileFAT}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{createFileFAT()}{createFileFAT()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_bs_file}{Bs\+File}}$\ast$ create\+File\+F\+AT (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{Fatdisck,  }\item[{unsigned long}]{size,  }\item[{unsigned char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+create\+File()  \mbox{\hyperlink{struct_bs_file}{Bs\+File}} erstellen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em Part} & Bs\+Fat wo File erstellen \\
+\hline
+{\em size} & grosse des File \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File in \mbox{\hyperlink{struct_partitation}{Partitation}} F\+AT zurueckgeben
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a15de9e1c7e2f804eecb2851bd4a07b49}\label{_bs_fat_emulator_8h_a15de9e1c7e2f804eecb2851bd4a07b49}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!defragDisk@{defragDisk}}
+\index{defragDisk@{defragDisk}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{defragDisk()}{defragDisk()}}
+{\footnotesize\ttfamily void defrag\+Disk (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{bs\+Fat }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_a15de9e1c7e2f804eecb2851bd4a07b49}{defrag\+Disk()}}  es wird die Bloecke von jedem einzelnen Datei gruppiert,dass sie moeglichst zusammenhaengend auf der Platte liegen. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em bs\+Fat} & Fat \mbox{\hyperlink{struct_partitation}{Partitation}}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 232 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_ab663f76031b51ba79078bf64f406ce47}\label{_bs_fat_emulator_8h_ab663f76031b51ba79078bf64f406ce47}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!deleteFileFat@{deleteFileFat}}
+\index{deleteFileFat@{deleteFileFat}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{deleteFileFat()}{deleteFileFat()}}
+{\footnotesize\ttfamily void delete\+File\+Fat (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{p\+Fat,  }\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+delete\+File()  es wird Datei durch name loescht 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Fat} & Bs\+Fat wo File steht \\
+\hline
+{\em file\+Name} & Name des File , die wollen wir loeschen\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 296 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_ae0363a2d8082254fd3e3434afbdccfa2}\label{_bs_fat_emulator_8h_ae0363a2d8082254fd3e3434afbdccfa2}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!getClusterByBlockIndex@{getClusterByBlockIndex}}
+\index{getClusterByBlockIndex@{getClusterByBlockIndex}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{getClusterByBlockIndex()}{getClusterByBlockIndex()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_block}{Block}}$\ast$ get\+Cluster\+By\+Block\+Index (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_bs_file}{Bs\+File}} $\ast$}]{file,  }\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_ae0363a2d8082254fd3e3434afbdccfa2}{get\+Cluster\+By\+Block\+Index()}}  \mbox{\hyperlink{struct_bs_file}{Bs\+File}} erstellen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em file} & zeiger auf Datei \\
+\hline
+{\em index} & der erst block von Datei \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+erst \mbox{\hyperlink{struct_block}{Block}} von Datei zurueckgeben
+\end{DoxyReturn}
+
+
+Definition at line 211 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_ac13d555989b1eb0d904c7d640c77d4bb}\label{_bs_fat_emulator_8h_ac13d555989b1eb0d904c7d640c77d4bb}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!getFileOwnerOfBlock@{getFileOwnerOfBlock}}
+\index{getFileOwnerOfBlock@{getFileOwnerOfBlock}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{getFileOwnerOfBlock()}{getFileOwnerOfBlock()}}
+{\footnotesize\ttfamily int get\+File\+Owner\+Of\+Block (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{bs\+Fat,  }\item[{int}]{block\+Index }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_ac13d555989b1eb0d904c7d640c77d4bb}{get\+File\+Owner\+Of\+Block()}}  \mbox{\hyperlink{struct_bs_file}{Bs\+File}} erstellen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em bs\+Fat} & Bs\+Fat \\
+\hline
+{\em block\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nummer Datei zurueckgeben,die hat erst blocke block\+Index
+\end{DoxyReturn}
+
+
+Definition at line 191 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_aeb613776ac80a9eab54d0cd8a7b55734}\label{_bs_fat_emulator_8h_aeb613776ac80a9eab54d0cd8a7b55734}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!getFragmentation@{getFragmentation}}
+\index{getFragmentation@{getFragmentation}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{getFragmentation()}{getFragmentation()}}
+{\footnotesize\ttfamily void get\+Fragmentation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{p\+Fat }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_aeb613776ac80a9eab54d0cd8a7b55734}{get\+Fragmentation()}}  diese Funktion gibt durchschnittliche Fragmentierung auf Ihrer Festplatte (zwischen 0 und 100 Prozent) zurueck 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Fat} & \mbox{\hyperlink{struct_partitation}{Partitation}} der F\+AT\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 153 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_ae07ef8a1ccd9dcfb162835eec8618603}\label{_bs_fat_emulator_8h_ae07ef8a1ccd9dcfb162835eec8618603}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!getFreeDiskSpace@{getFreeDiskSpace}}
+\index{getFreeDiskSpace@{getFreeDiskSpace}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{getFreeDiskSpace()}{getFreeDiskSpace()}}
+{\footnotesize\ttfamily unsigned int get\+Free\+Disk\+Space (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{Fatdisck }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_ae07ef8a1ccd9dcfb162835eec8618603}{get\+Free\+Disk\+Space()}}  freien Speicher auf einer Platte brechnen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em get\+Free\+Disk\+Space} & Bs\+Fat$\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+freien Speicher auf einer Platte zurueckgeben
+\end{DoxyReturn}
+
+
+Definition at line 135 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a3eead2ec268bdc8aba960d9e70930af1}\label{_bs_fat_emulator_8h_a3eead2ec268bdc8aba960d9e70930af1}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!getIndexOfFreeBlock@{getIndexOfFreeBlock}}
+\index{getIndexOfFreeBlock@{getIndexOfFreeBlock}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{getIndexOfFreeBlock()}{getIndexOfFreeBlock()}}
+{\footnotesize\ttfamily unsigned int get\+Index\+Of\+Free\+Block (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{Part }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_a3eead2ec268bdc8aba960d9e70930af1}{get\+Index\+Of\+Free\+Block()}}  sucht auf Index der Frei \mbox{\hyperlink{struct_block}{Block}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em Part} & \mbox{\hyperlink{struct_partitation}{Partitation}} F\+AT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index der Frei \mbox{\hyperlink{struct_block}{Block}}
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a18b2906467c9bd4d8ce655d9fb025623}\label{_bs_fat_emulator_8h_a18b2906467c9bd4d8ce655d9fb025623}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!Partitionerstellen@{Partitionerstellen}}
+\index{Partitionerstellen@{Partitionerstellen}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{Partitionerstellen()}{Partitionerstellen()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_partitation}{Partitation}}$\ast$ Partitionerstellen (\begin{DoxyParamCaption}\item[{char $\ast$}]{Pname,  }\item[{unsigned long}]{paritationsize,  }\item[{unsigned int}]{block\+Size }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_a18b2906467c9bd4d8ce655d9fb025623}{Partitionerstellen()}}  das Erstellen von \mbox{\hyperlink{struct_partitation}{Partitation}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}{F\+AT}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em Pname} & Name der \mbox{\hyperlink{struct_partitation}{Partitation}} \\
+\hline
+{\em paritationsize} & grosse des \mbox{\hyperlink{struct_partitation}{Partitation}} \\
+\hline
+{\em block\+Size} & grosse der \mbox{\hyperlink{struct_block}{Block}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zeiger auf \mbox{\hyperlink{struct_partitation}{Partitation}} F\+AT
+\end{DoxyReturn}
+
+
+Definition at line 6 of file Bs\+Fat\+Emulator.\+c.
+
+\mbox{\Hypertarget{_bs_fat_emulator_8h_a273744ba1a75d66d2f9993689ac926c7}\label{_bs_fat_emulator_8h_a273744ba1a75d66d2f9993689ac926c7}} 
+\index{BsFatEmulator.h@{BsFatEmulator.h}!sfs\_ls@{sfs\_ls}}
+\index{sfs\_ls@{sfs\_ls}!BsFatEmulator.h@{BsFatEmulator.h}}
+\doxysubsubsection{\texorpdfstring{sfs\_ls()}{sfs\_ls()}}
+{\footnotesize\ttfamily void sfs\+\_\+ls (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$}]{p\+Fat,  }\item[{unsigned int}]{File\+\_\+\+Max\+\_\+\+F\+AT }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_fat_emulator_8c_a273744ba1a75d66d2f9993689ac926c7}{sfs\+\_\+ls()}}  alle Datei in \mbox{\hyperlink{struct_partitation}{Partitation}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}{F\+AT}} anzeigen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Fat} & Fat \mbox{\hyperlink{struct_partitation}{Partitation}} \\
+\hline
+{\em Zahle} & der Datei ,der schon erstellt wurde\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 327 of file Bs\+Fat\+Emulator.\+c.
+

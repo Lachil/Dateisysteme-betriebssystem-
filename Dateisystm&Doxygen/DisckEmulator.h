@@ -1,0 +1,7 @@
+#ifndef DISCKERSTELLEN_H
+#define DISCKERSTELLEN_H
+
+
+
+
+#endif // DISCKERSTELLEN_H

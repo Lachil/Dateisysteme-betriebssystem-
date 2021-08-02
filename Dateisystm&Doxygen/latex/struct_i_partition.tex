@@ -1,0 +1,115 @@
+\hypertarget{struct_i_partition}{}\doxysection{I\+Partition Struct Reference}
+\label{struct_i_partition}\index{IPartition@{IPartition}}
+
+
+die struct ,die die Verwaltung einer Partition ueber Inode\+Bloecke ermoeglich  
+
+
+
+
+{\ttfamily \#include $<$Bs\+Inodes.\+h$>$}
+
+
+
+Collaboration diagram for I\+Partition\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_i_partition_a9d4ad84c84ec95b7bacf581e44b12f80}{disck\+Size}}
+\item 
+int \mbox{\hyperlink{struct_i_partition_a4aaa73e329d20f35039fa5cdd2e6f648}{block\+Size}}
+\item 
+int \mbox{\hyperlink{struct_i_partition_a910ec6d992af8a0e0b09333ad24f901c}{Block\+Count}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_i_partition_a96b5bda42dd7290c6b1e59d1c70322c1}{Name\+I\+Part}}
+\item 
+struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}} $\ast$$\ast$ \mbox{\hyperlink{struct_i_partition_ad1f7530250ff293f9938001f7ce890a3}{blocks}}
+\item 
+struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}} $\ast$ \mbox{\hyperlink{struct_i_partition_aa80f8820633029b179269da20a8198cf}{Files}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+die struct ,die die Verwaltung einer Partition ueber Inode\+Bloecke ermoeglich 
+
+Variable disck\+Size grosse der P\+Artitation
+
+Variable block\+Size grosse der \mbox{\hyperlink{struct_block}{Block}}
+
+Variable Block\+Count Zahle der Blocks
+
+Variable blocks zeiger auf Tabelle von blocks
+
+Variable Files zeiger auf Datei 
+
+Definition at line 52 of file Bs\+Inodes.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_i_partition_a910ec6d992af8a0e0b09333ad24f901c}\label{struct_i_partition_a910ec6d992af8a0e0b09333ad24f901c}} 
+\index{IPartition@{IPartition}!BlockCount@{BlockCount}}
+\index{BlockCount@{BlockCount}!IPartition@{IPartition}}
+\doxysubsubsection{\texorpdfstring{BlockCount}{BlockCount}}
+{\footnotesize\ttfamily int Block\+Count}
+
+
+
+Definition at line 65 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_i_partition_ad1f7530250ff293f9938001f7ce890a3}\label{struct_i_partition_ad1f7530250ff293f9938001f7ce890a3}} 
+\index{IPartition@{IPartition}!blocks@{blocks}}
+\index{blocks@{blocks}!IPartition@{IPartition}}
+\doxysubsubsection{\texorpdfstring{blocks}{blocks}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}}$\ast$$\ast$ blocks}
+
+
+
+Definition at line 67 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_i_partition_a4aaa73e329d20f35039fa5cdd2e6f648}\label{struct_i_partition_a4aaa73e329d20f35039fa5cdd2e6f648}} 
+\index{IPartition@{IPartition}!blockSize@{blockSize}}
+\index{blockSize@{blockSize}!IPartition@{IPartition}}
+\doxysubsubsection{\texorpdfstring{blockSize}{blockSize}}
+{\footnotesize\ttfamily int block\+Size}
+
+
+
+Definition at line 64 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_i_partition_a9d4ad84c84ec95b7bacf581e44b12f80}\label{struct_i_partition_a9d4ad84c84ec95b7bacf581e44b12f80}} 
+\index{IPartition@{IPartition}!disckSize@{disckSize}}
+\index{disckSize@{disckSize}!IPartition@{IPartition}}
+\doxysubsubsection{\texorpdfstring{disckSize}{disckSize}}
+{\footnotesize\ttfamily int disck\+Size}
+
+
+
+Definition at line 63 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_i_partition_aa80f8820633029b179269da20a8198cf}\label{struct_i_partition_aa80f8820633029b179269da20a8198cf}} 
+\index{IPartition@{IPartition}!Files@{Files}}
+\index{Files@{Files}!IPartition@{IPartition}}
+\doxysubsubsection{\texorpdfstring{Files}{Files}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}}$\ast$ Files}
+
+
+
+Definition at line 68 of file Bs\+Inodes.\+h.
+
+\mbox{\Hypertarget{struct_i_partition_a96b5bda42dd7290c6b1e59d1c70322c1}\label{struct_i_partition_a96b5bda42dd7290c6b1e59d1c70322c1}} 
+\index{IPartition@{IPartition}!NameIPart@{NameIPart}}
+\index{NameIPart@{NameIPart}!IPartition@{IPartition}}
+\doxysubsubsection{\texorpdfstring{NameIPart}{NameIPart}}
+{\footnotesize\ttfamily char$\ast$ Name\+I\+Part}
+
+
+
+Definition at line 66 of file Bs\+Inodes.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_bs_inodes_8h}{Bs\+Inodes.\+h}}\end{DoxyCompactItemize}

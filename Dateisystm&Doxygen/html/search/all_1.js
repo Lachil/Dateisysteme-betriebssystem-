@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['belegt_2',['belegt',['../_bs_fat_emulator_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a995fab8443f238b162dfdb66a1ce247f',1,'belegt():&#160;BsFatEmulator.h'],['../_bs_inodes_8h.html#af49e8927ae63cb33b45cab646ffbe460aff4c698a54d7030a1fe136c8c7686b44',1,'BELEGT():&#160;BsInodes.h']]],
+  ['block_3',['Block',['../struct_block.html',1,'']]],
+  ['blockcount_4',['blockCount',['../struct_partitation.html#a050f2d0c286fafff23244a2a6097031b',1,'Partitation::blockCount()'],['../struct_i_partition.html#a910ec6d992af8a0e0b09333ad24f901c',1,'IPartition::BlockCount()']]],
+  ['blocks_5',['blocks',['../struct_i_partition.html#ad1f7530250ff293f9938001f7ce890a3',1,'IPartition::blocks()'],['../struct_c_d.html#abf800e03c4710249a2cb10f7e73166bf',1,'CD::blocks()']]],
+  ['blockscount_6',['blocksCount',['../struct_c_d.html#a24c6c92ab01c2d787c68a075a7fedc22',1,'CD']]],
+  ['blocksize_7',['blockSize',['../struct_i_partition.html#a4aaa73e329d20f35039fa5cdd2e6f648',1,'IPartition::blockSize()'],['../struct_c_d.html#a4aaa73e329d20f35039fa5cdd2e6f648',1,'CD::blockSize()']]],
+  ['blocsize_8',['blocSize',['../struct_partitation.html#a5c4dd1467b8622f54a5c19aa46789dc4',1,'Partitation']]],
+  ['boot_9',['boot',['../struct_c_d_block.html#a2ff60d1af738e4529f799025e6a668c0',1,'CDBlock']]],
+  ['bscluster_10',['BsCluster',['../struct_bs_cluster.html',1,'']]],
+  ['bsfat_2ddisck_2ec_11',['Bsfat-disck.c',['../_bsfat-disck_8c.html',1,'']]],
+  ['bsfat_2ddisck_2eh_12',['Bsfat-disck.h',['../_bsfat-disck_8h.html',1,'']]],
+  ['bsfatemulator_2ec_13',['BsFatEmulator.c',['../_bs_fat_emulator_8c.html',1,'']]],
+  ['bsfatemulator_2eh_14',['BsFatEmulator.h',['../_bs_fat_emulator_8h.html',1,'']]],
+  ['bsfile_15',['BsFile',['../struct_bs_file.html',1,'']]],
+  ['bsfile_2ec_16',['BsFile.c',['../_bs_file_8c.html',1,'']]],
+  ['bsfile_2eh_17',['BsFile.h',['../_bs_file_8h.html',1,'']]],
+  ['bsinodes_2ec_18',['BsInodes.c',['../_bs_inodes_8c.html',1,'']]],
+  ['bsinodes_2eh_19',['BsInodes.h',['../_bs_inodes_8h.html',1,'']]]
+];

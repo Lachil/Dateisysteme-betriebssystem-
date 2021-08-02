@@ -1,0 +1,271 @@
+\hypertarget{_bs_inodes_8h}{}\doxysection{Bs\+Inodes.\+h File Reference}
+\label{_bs_inodes_8h}\index{BsInodes.h@{BsInodes.h}}
+{\ttfamily \#include \char`\"{}Disck\+Emu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bs\+Fat\+Emulator.\+h\char`\"{}}\newline
+Include dependency graph for Bs\+Inodes.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer Festplatte ueber Inode\+Bloecke ermoeglich \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer Festplatte ueber Bloecke ermoeglich \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structindirect_block}{indirect\+Block}}
+\begin{DoxyCompactList}\small\item\em indirect Zeiger auf 128 Blocks \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer Partition ueber Inode\+Bloecke ermoeglich \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}{State\+Inode}} \mbox{\hyperlink{_bs_inodes_8h_ab302d27bbfba534db48011dbf1476f6f}{State\+Inode}}
+\begin{DoxyCompactList}\small\item\em Bs\+Inodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}{State\+Inode}} \{ \mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460acc62d1576546f3245237e1b232d838b6}{F\+R\+EE}}, 
+\mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460aff4c698a54d7030a1fe136c8c7686b44}{B\+E\+L\+E\+GT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Bs\+Inodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$ \mbox{\hyperlink{_bs_inodes_8h_a7df235c246a74f411da2a4380d328db8}{create\+I\+N\+O\+D\+Epartition}} (char $\ast$Name\+I\+Part, int Partsize, unsigned int size\+Block)
+\item 
+void \mbox{\hyperlink{_bs_inodes_8h_a3737317546ffbaf9cf1caee67a350c8e}{add\+I\+N\+O\+D\+Efile}} (struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$p\+Inode, struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}} $\ast$file)
+\item 
+float \mbox{\hyperlink{_bs_inodes_8h_a0d306dcc87ef530e76df4e92f5b80586}{fragmentation\+I\+N\+O\+DE}} (struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$p\+Inode)
+\item 
+void \mbox{\hyperlink{_bs_inodes_8h_a951edc014638e77bae3d400b62315453}{create\+I\+N\+O\+D\+Efile}} (struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$pinode, int Filesize, char $\ast$name)
+\item 
+int \mbox{\hyperlink{_bs_inodes_8h_ab1b943add1b503f4a13155fdcb3eb15c}{freediskspace\+Inode}} (struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$p\+Inode)
+\item 
+void \mbox{\hyperlink{_bs_inodes_8h_ae6b166db40b491a02f127f96b4345b0e}{file\+I\+N\+O\+DE}} (struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$pinode)
+\item 
+void \mbox{\hyperlink{_bs_inodes_8h_ab3cf9541bb6cfc355f83c45bd651a808}{defrag\+Ipartition}} (struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$p\+Inode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}} \mbox{\hyperlink{_bs_inodes_8h_ad9bfac84a688c9a9210bda3b6dd23e6f}{Inode\+Block}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_bs_inodes_8h_ab302d27bbfba534db48011dbf1476f6f}\label{_bs_inodes_8h_ab302d27bbfba534db48011dbf1476f6f}} 
+\index{BsInodes.h@{BsInodes.h}!StateInode@{StateInode}}
+\index{StateInode@{StateInode}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{StateInode}{StateInode}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}{State\+Inode}} \mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}{State\+Inode}}}
+
+
+
+Bs\+Inodes. 
+
+Bs\+Inodes ist für \mbox{\hyperlink{struct_partitation}{Partitation}} I\+N\+O\+DE Funktionen dafür ,zu erstellen \begin{DoxyAuthor}{Author}
+Lhabib Lachil 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28.\+08.\+2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}\label{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}} 
+\index{BsInodes.h@{BsInodes.h}!StateInode@{StateInode}}
+\index{StateInode@{StateInode}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{StateInode}{StateInode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460}{State\+Inode}}}
+
+
+
+Bs\+Inodes. 
+
+Bs\+Inodes ist für \mbox{\hyperlink{struct_partitation}{Partitation}} I\+N\+O\+DE Funktionen dafür ,zu erstellen \begin{DoxyAuthor}{Author}
+Lhabib Lachil 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28.\+08.\+2020 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREE@{FREE}!BsInodes.h@{BsInodes.h}}\index{BsInodes.h@{BsInodes.h}!FREE@{FREE}}}\mbox{\Hypertarget{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460acc62d1576546f3245237e1b232d838b6}\label{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460acc62d1576546f3245237e1b232d838b6}} 
+F\+R\+EE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BELEGT@{BELEGT}!BsInodes.h@{BsInodes.h}}\index{BsInodes.h@{BsInodes.h}!BELEGT@{BELEGT}}}\mbox{\Hypertarget{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460aff4c698a54d7030a1fe136c8c7686b44}\label{_bs_inodes_8h_af49e8927ae63cb33b45cab646ffbe460aff4c698a54d7030a1fe136c8c7686b44}} 
+B\+E\+L\+E\+GT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file Bs\+Inodes.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_bs_inodes_8h_a3737317546ffbaf9cf1caee67a350c8e}\label{_bs_inodes_8h_a3737317546ffbaf9cf1caee67a350c8e}} 
+\index{BsInodes.h@{BsInodes.h}!addINODEfile@{addINODEfile}}
+\index{addINODEfile@{addINODEfile}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{addINODEfile()}{addINODEfile()}}
+{\footnotesize\ttfamily void add\+I\+N\+O\+D\+Efile (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$}]{p\+Inode,  }\item[{struct \mbox{\hyperlink{struct_inode_file}{Inode\+File}} $\ast$}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_ae6cc39292993894d877d600560635c75}{add\+I\+N\+O\+D\+Efile()}}  \mbox{\hyperlink{struct_bs_file}{Bs\+File}} hinzufuegen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pinode} & \mbox{\hyperlink{struct_i_partition}{I\+Partition}} wo File hinzufuegen \\
+\hline
+{\em file} & datei ,der hinzufuegen wird \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File in \mbox{\hyperlink{struct_partitation}{Partitation}} I\+N\+O\+DE hinzufuegen
+\end{DoxyReturn}
+
+
+Definition at line 37 of file Bs\+Inodes.\+c.
+
+\mbox{\Hypertarget{_bs_inodes_8h_a951edc014638e77bae3d400b62315453}\label{_bs_inodes_8h_a951edc014638e77bae3d400b62315453}} 
+\index{BsInodes.h@{BsInodes.h}!createINODEfile@{createINODEfile}}
+\index{createINODEfile@{createINODEfile}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{createINODEfile()}{createINODEfile()}}
+{\footnotesize\ttfamily void create\+I\+N\+O\+D\+Efile (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$}]{pinode,  }\item[{int}]{Filesize,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_a951edc014638e77bae3d400b62315453}{create\+I\+N\+O\+D\+Efile()}}  \mbox{\hyperlink{struct_bs_file}{Bs\+File}} erstellen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pinode} & wo in \mbox{\hyperlink{struct_i_partition}{I\+Partition}} File erstellen \\
+\hline
+{\em Filesize} & grosse des File \\
+\hline
+{\em name} & der File \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File in \mbox{\hyperlink{struct_partitation}{Partitation}} F\+AT erstellen
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Bs\+Inodes.\+c.
+
+\mbox{\Hypertarget{_bs_inodes_8h_a7df235c246a74f411da2a4380d328db8}\label{_bs_inodes_8h_a7df235c246a74f411da2a4380d328db8}} 
+\index{BsInodes.h@{BsInodes.h}!createINODEpartition@{createINODEpartition}}
+\index{createINODEpartition@{createINODEpartition}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{createINODEpartition()}{createINODEpartition()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}}$\ast$ create\+I\+N\+O\+D\+Epartition (\begin{DoxyParamCaption}\item[{char $\ast$}]{Name\+I\+Part,  }\item[{int}]{Partsize,  }\item[{unsigned int}]{size\+Block }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_a7df235c246a74f411da2a4380d328db8}{create\+I\+N\+O\+D\+Epartition()}}  das Erstellen von \mbox{\hyperlink{struct_partitation}{Partitation}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331abc2dfd12ed0d4231c1edb2c6522f8c03}{I\+N\+O\+DE}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em Name\+I\+Part} & Name der \mbox{\hyperlink{struct_partitation}{Partitation}} \\
+\hline
+{\em Partsize} & grosse des \mbox{\hyperlink{struct_partitation}{Partitation}} \\
+\hline
+{\em size\+Block} & grosse der \mbox{\hyperlink{struct_block}{Block}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zeiger auf \mbox{\hyperlink{struct_partitation}{Partitation}} I\+N\+O\+DE
+\end{DoxyReturn}
+
+
+Definition at line 4 of file Bs\+Inodes.\+c.
+
+\mbox{\Hypertarget{_bs_inodes_8h_ab3cf9541bb6cfc355f83c45bd651a808}\label{_bs_inodes_8h_ab3cf9541bb6cfc355f83c45bd651a808}} 
+\index{BsInodes.h@{BsInodes.h}!defragIpartition@{defragIpartition}}
+\index{defragIpartition@{defragIpartition}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{defragIpartition()}{defragIpartition()}}
+{\footnotesize\ttfamily void defrag\+Ipartition (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$}]{p\+Inode }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_ab3cf9541bb6cfc355f83c45bd651a808}{defrag\+Ipartition()}}  es wird die Bloecke von jedem einzelnen Datei gruppiert,dass sie moeglichst zusammenhaengend auf der Platte liegen. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Inode} & I\+N\+O\+DE Partition\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 241 of file Bs\+Inodes.\+c.
+
+\mbox{\Hypertarget{_bs_inodes_8h_ae6b166db40b491a02f127f96b4345b0e}\label{_bs_inodes_8h_ae6b166db40b491a02f127f96b4345b0e}} 
+\index{BsInodes.h@{BsInodes.h}!fileINODE@{fileINODE}}
+\index{fileINODE@{fileINODE}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{fileINODE()}{fileINODE()}}
+{\footnotesize\ttfamily void file\+I\+N\+O\+DE (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$}]{pinode }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_ae6b166db40b491a02f127f96b4345b0e}{file\+I\+N\+O\+D\+E()}}  alle Datei in \mbox{\hyperlink{struct_partitation}{Partitation}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331abc2dfd12ed0d4231c1edb2c6522f8c03}{I\+N\+O\+DE}} anzeigen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pinode} & Zeiger auf I\+N\+O\+DE \mbox{\hyperlink{struct_partitation}{Partitation}}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 225 of file Bs\+Inodes.\+c.
+
+\mbox{\Hypertarget{_bs_inodes_8h_a0d306dcc87ef530e76df4e92f5b80586}\label{_bs_inodes_8h_a0d306dcc87ef530e76df4e92f5b80586}} 
+\index{BsInodes.h@{BsInodes.h}!fragmentationINODE@{fragmentationINODE}}
+\index{fragmentationINODE@{fragmentationINODE}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{fragmentationINODE()}{fragmentationINODE()}}
+{\footnotesize\ttfamily float fragmentation\+I\+N\+O\+DE (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$}]{p\+Inode }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_a0d306dcc87ef530e76df4e92f5b80586}{fragmentation\+I\+N\+O\+D\+E()}}  diese Funktion gibt durchschnittliche Fragmentierung auf Ihrer Festplatte (zwischen 0 und 100 Prozent) zurueck 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Inode} & \mbox{\hyperlink{struct_i_partition}{I\+Partition}} der I\+N\+O\+DE\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 176 of file Bs\+Inodes.\+c.
+
+\mbox{\Hypertarget{_bs_inodes_8h_ab1b943add1b503f4a13155fdcb3eb15c}\label{_bs_inodes_8h_ab1b943add1b503f4a13155fdcb3eb15c}} 
+\index{BsInodes.h@{BsInodes.h}!freediskspaceInode@{freediskspaceInode}}
+\index{freediskspaceInode@{freediskspaceInode}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{freediskspaceInode()}{freediskspaceInode()}}
+{\footnotesize\ttfamily int freediskspace\+Inode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$}]{p\+Inode }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_bs_inodes_8c_ab1b943add1b503f4a13155fdcb3eb15c}{freediskspace\+Inode()}}  freien Speicher auf \mbox{\hyperlink{struct_i_partition}{I\+Partition}} brechnen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Inode} & I\+Partition$\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+freien Speicher auf einer Platte zurueckgeben
+\end{DoxyReturn}
+
+
+Definition at line 154 of file Bs\+Inodes.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_bs_inodes_8h_ad9bfac84a688c9a9210bda3b6dd23e6f}\label{_bs_inodes_8h_ad9bfac84a688c9a9210bda3b6dd23e6f}} 
+\index{BsInodes.h@{BsInodes.h}!InodeBlock@{InodeBlock}}
+\index{InodeBlock@{InodeBlock}!BsInodes.h@{BsInodes.h}}
+\doxysubsubsection{\texorpdfstring{InodeBlock}{InodeBlock}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_inode_block}{Inode\+Block}} \mbox{\hyperlink{struct_inode_block}{Inode\+Block}}}
+

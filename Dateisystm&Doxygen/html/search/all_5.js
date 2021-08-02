@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['getclusterbyblockindex_73',['getClusterByBlockIndex',['../_bs_fat_emulator_8c.html#ae0363a2d8082254fd3e3434afbdccfa2',1,'getClusterByBlockIndex(struct BsFile *file, unsigned int index):&#160;BsFatEmulator.c'],['../_bs_fat_emulator_8h.html#ae0363a2d8082254fd3e3434afbdccfa2',1,'getClusterByBlockIndex(struct BsFile *file, unsigned int index):&#160;BsFatEmulator.c']]],
+  ['getfileownerofblock_74',['getFileOwnerOfBlock',['../_bs_fat_emulator_8c.html#ac13d555989b1eb0d904c7d640c77d4bb',1,'getFileOwnerOfBlock(struct Partitation *bsFat, int blockIndex):&#160;BsFatEmulator.c'],['../_bs_fat_emulator_8h.html#ac13d555989b1eb0d904c7d640c77d4bb',1,'getFileOwnerOfBlock(struct Partitation *bsFat, int blockIndex):&#160;BsFatEmulator.c']]],
+  ['getfragmentation_75',['getFragmentation',['../_bs_fat_emulator_8c.html#aeb613776ac80a9eab54d0cd8a7b55734',1,'getFragmentation(struct Partitation *pFat):&#160;BsFatEmulator.c'],['../_bs_fat_emulator_8h.html#aeb613776ac80a9eab54d0cd8a7b55734',1,'getFragmentation(struct Partitation *pFat):&#160;BsFatEmulator.c']]],
+  ['getfreediskspace_76',['getFreeDiskSpace',['../_bs_fat_emulator_8c.html#ae07ef8a1ccd9dcfb162835eec8618603',1,'getFreeDiskSpace(struct Partitation *Fatdisck):&#160;BsFatEmulator.c'],['../_bs_fat_emulator_8h.html#ae07ef8a1ccd9dcfb162835eec8618603',1,'getFreeDiskSpace(struct Partitation *Fatdisck):&#160;BsFatEmulator.c']]],
+  ['getindexoffreeblock_77',['getIndexOfFreeBlock',['../_bs_fat_emulator_8c.html#a3eead2ec268bdc8aba960d9e70930af1',1,'getIndexOfFreeBlock(struct Partitation *Part):&#160;BsFatEmulator.c'],['../_bs_fat_emulator_8h.html#a3eead2ec268bdc8aba960d9e70930af1',1,'getIndexOfFreeBlock(struct Partitation *Part):&#160;BsFatEmulator.c']]]
+];

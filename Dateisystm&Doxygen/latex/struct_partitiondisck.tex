@@ -1,0 +1,75 @@
+\hypertarget{struct_partitiondisck}{}\doxysection{Partitiondisck Struct Reference}
+\label{struct_partitiondisck}\index{Partitiondisck@{Partitiondisck}}
+
+
+die struct ,die die Verwaltung einer Partition von Disck  
+
+
+
+
+{\ttfamily \#include $<$Disck\+Emu.\+h$>$}
+
+
+
+Collaboration diagram for Partitiondisck\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_superblock}{Superblock}} $\ast$ \mbox{\hyperlink{struct_partitiondisck_a5386df1086443fa8685e78101cef60c9}{superblock}}
+\item 
+struct \mbox{\hyperlink{struct_partitation}{Partitation}} $\ast$ \mbox{\hyperlink{struct_partitiondisck_a4f3ac9f3a867e2fbe3a0fa00dacd97c1}{fat}}
+\item 
+struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}} $\ast$ \mbox{\hyperlink{struct_partitiondisck_af9480916dee1aca4b4882ccacd4ded78}{inode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+die struct ,die die Verwaltung einer Partition von Disck 
+
+Variable superblock der Disck
+
+Variable fat wenn \mbox{\hyperlink{struct_partitation}{Partitation}} ist F\+AT
+
+Variable inode wenn \mbox{\hyperlink{struct_partitation}{Partitation}} ist I\+N\+O\+DE 
+
+Definition at line 41 of file Disck\+Emu.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_partitiondisck_a4f3ac9f3a867e2fbe3a0fa00dacd97c1}\label{struct_partitiondisck_a4f3ac9f3a867e2fbe3a0fa00dacd97c1}} 
+\index{Partitiondisck@{Partitiondisck}!fat@{fat}}
+\index{fat@{fat}!Partitiondisck@{Partitiondisck}}
+\doxysubsubsection{\texorpdfstring{fat}{fat}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_partitation}{Partitation}}$\ast$ fat}
+
+
+
+Definition at line 50 of file Disck\+Emu.\+h.
+
+\mbox{\Hypertarget{struct_partitiondisck_af9480916dee1aca4b4882ccacd4ded78}\label{struct_partitiondisck_af9480916dee1aca4b4882ccacd4ded78}} 
+\index{Partitiondisck@{Partitiondisck}!inode@{inode}}
+\index{inode@{inode}!Partitiondisck@{Partitiondisck}}
+\doxysubsubsection{\texorpdfstring{inode}{inode}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_i_partition}{I\+Partition}}$\ast$ inode}
+
+
+
+Definition at line 51 of file Disck\+Emu.\+h.
+
+\mbox{\Hypertarget{struct_partitiondisck_a5386df1086443fa8685e78101cef60c9}\label{struct_partitiondisck_a5386df1086443fa8685e78101cef60c9}} 
+\index{Partitiondisck@{Partitiondisck}!superblock@{superblock}}
+\index{superblock@{superblock}!Partitiondisck@{Partitiondisck}}
+\doxysubsubsection{\texorpdfstring{superblock}{superblock}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_superblock}{Superblock}}$\ast$ superblock}
+
+
+
+Definition at line 49 of file Disck\+Emu.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_disck_emu_8h}{Disck\+Emu.\+h}}\end{DoxyCompactItemize}

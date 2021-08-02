@@ -1,0 +1,87 @@
+\hypertarget{_c_droom_emulator_8c}{}\doxysection{C\+Droom\+Emulator.\+c File Reference}
+\label{_c_droom_emulator_8c}\index{CDroomEmulator.c@{CDroomEmulator.c}}
+{\ttfamily \#include \char`\"{}C\+Droom\+Emulator.\+h\char`\"{}}\newline
+Include dependency graph for C\+Droom\+Emulator.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_c_d}{CD}} $\ast$ \mbox{\hyperlink{_c_droom_emulator_8c_a39dbf2430d5a1d9cfd91ff0b8737ac0c}{create\+CD}} (char $\ast$name, int size, int block\+Size, struct \mbox{\hyperlink{struct_c_d_file}{C\+D\+File}} $\ast$$\ast$Files, int filescount)
+\item 
+struct \mbox{\hyperlink{struct_c_d_file}{C\+D\+File}} $\ast$ \mbox{\hyperlink{_c_droom_emulator_8c_acccdd2358565420f726ea842dcb57369}{C\+D\+Fileerstellt}} (char $\ast$name, int file\+Size)
+\item 
+void \mbox{\hyperlink{_c_droom_emulator_8c_aad7e3908600d7ee7d884f491072f02d6}{ls\+\_\+cd}} (struct \mbox{\hyperlink{struct_c_d}{CD}} $\ast$cd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_c_droom_emulator_8c_acccdd2358565420f726ea842dcb57369}\label{_c_droom_emulator_8c_acccdd2358565420f726ea842dcb57369}} 
+\index{CDroomEmulator.c@{CDroomEmulator.c}!CDFileerstellt@{CDFileerstellt}}
+\index{CDFileerstellt@{CDFileerstellt}!CDroomEmulator.c@{CDroomEmulator.c}}
+\doxysubsubsection{\texorpdfstring{CDFileerstellt()}{CDFileerstellt()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_c_d_file}{C\+D\+File}}$\ast$ C\+D\+Fileerstellt (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{int}]{file\+Size }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_c_droom_emulator_8c_acccdd2358565420f726ea842dcb57369}{C\+D\+Fileerstellt()}}  \mbox{\hyperlink{struct_bs_file}{Bs\+File}} erstellen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em Filesize} & grosse des File \\
+\hline
+{\em name} & der File \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File fuer C\+D\+R\+O\+OM erstellen
+\end{DoxyReturn}
+
+
+Definition at line 81 of file C\+Droom\+Emulator.\+c.
+
+\mbox{\Hypertarget{_c_droom_emulator_8c_a39dbf2430d5a1d9cfd91ff0b8737ac0c}\label{_c_droom_emulator_8c_a39dbf2430d5a1d9cfd91ff0b8737ac0c}} 
+\index{CDroomEmulator.c@{CDroomEmulator.c}!createCD@{createCD}}
+\index{createCD@{createCD}!CDroomEmulator.c@{CDroomEmulator.c}}
+\doxysubsubsection{\texorpdfstring{createCD()}{createCD()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_c_d}{CD}}$\ast$ create\+CD (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{int}]{size,  }\item[{int}]{block\+Size,  }\item[{struct \mbox{\hyperlink{struct_c_d_file}{C\+D\+File}} $\ast$$\ast$}]{Files,  }\item[{int}]{filescount }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_c_droom_emulator_8c_a39dbf2430d5a1d9cfd91ff0b8737ac0c}{create\+C\+D()}}  das Erstellen von \mbox{\hyperlink{struct_partitation}{Partitation}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}{F\+AT}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name der C\+D\+R\+O\+OM \\
+\hline
+{\em size} & grosse des C\+D\+R\+O\+OM \\
+\hline
+{\em block\+Size} & grosse der \mbox{\hyperlink{struct_block}{Block}} \\
+\hline
+{\em Files} & Zeiger auf Tabelle der Datei \\
+\hline
+{\em filescount} & Zahle der Datei in C\+D\+R\+O\+OM \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zeiger auf C\+D\+R\+O\+OM
+\end{DoxyReturn}
+
+
+Definition at line 3 of file C\+Droom\+Emulator.\+c.
+
+\mbox{\Hypertarget{_c_droom_emulator_8c_aad7e3908600d7ee7d884f491072f02d6}\label{_c_droom_emulator_8c_aad7e3908600d7ee7d884f491072f02d6}} 
+\index{CDroomEmulator.c@{CDroomEmulator.c}!ls\_cd@{ls\_cd}}
+\index{ls\_cd@{ls\_cd}!CDroomEmulator.c@{CDroomEmulator.c}}
+\doxysubsubsection{\texorpdfstring{ls\_cd()}{ls\_cd()}}
+{\footnotesize\ttfamily void ls\+\_\+cd (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_d}{CD}} $\ast$}]{cd }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_c_droom_emulator_8c_aad7e3908600d7ee7d884f491072f02d6}{ls\+\_\+cd()}}  alle Datei in C\+D\+R\+O\+OM anzeigen 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em cd} & Zeiger auf C\+D\+R\+O\+OM\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file C\+Droom\+Emulator.\+c.
+

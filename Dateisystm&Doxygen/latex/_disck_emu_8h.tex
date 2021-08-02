@@ -1,0 +1,202 @@
+\hypertarget{_disck_emu_8h}{}\doxysection{Disck\+Emu.\+h File Reference}
+\label{_disck_emu_8h}\index{DisckEmu.h@{DisckEmu.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Bs\+Inodes.\+h\char`\"{}}\newline
+Include dependency graph for Disck\+Emu.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_superblock}{Superblock}}
+\begin{DoxyCompactList}\small\item\em die struct erstellt die magic\+Number und number\+Of\+Blocks usf disck \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_partitiondisck}{Partitiondisck}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer Partition von Disck \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_m_b_r}{M\+BR}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer tabelle von Festplatt \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}}
+\begin{DoxyCompactList}\small\item\em die struct ,die die Verwaltung einer H\+D\+Ddisck mit grosse size \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}{State\+Disck}} \mbox{\hyperlink{_disck_emu_8h_adc3fd04a6fca4cce28b147d915be6ef5}{State\+Disck}}
+\begin{DoxyCompactList}\small\item\em Disck\+Emu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}{State\+Disck}} \{ \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}{F\+AT}}, 
+\mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331abc2dfd12ed0d4231c1edb2c6522f8c03}{I\+N\+O\+DE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Disck\+Emu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$ \mbox{\hyperlink{_disck_emu_8h_a49b081d385ef2d9d63c74f6a9465d958}{create\+H\+DD}} (unsigned int size)
+\item 
+void \mbox{\hyperlink{_disck_emu_8h_ae17de01fd02cb09c821ca59f39b35c95}{create\+Partition}} (struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$hdd, char $\ast$disck\+\_\+name, unsigned int Art, int size, int block\+Size)
+\item 
+void \mbox{\hyperlink{_disck_emu_8h_aa804e37c130076cc02088aef0e5c5c8c}{delete\+Partition}} (struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$hdd, int typ)
+\item 
+void \mbox{\hyperlink{_disck_emu_8h_a268bdf529c393a4d60c84b419d268dbe}{delete\+H\+DD}} (struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$hdd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_superblock}{Superblock}} \mbox{\hyperlink{_disck_emu_8h_ad7289123e929413b0e9ac4a5cb0e1742}{Superblock}}
+\item 
+struct \mbox{\hyperlink{struct_partitiondisck}{Partitiondisck}} \mbox{\hyperlink{_disck_emu_8h_a25ea38f57e83d0ba9d75fddbc279434f}{Partition}}
+\item 
+struct \mbox{\hyperlink{struct_m_b_r}{M\+BR}} \mbox{\hyperlink{_disck_emu_8h_af13c4c3f31f14a0ff5fd28dd5c4370f9}{M\+BR}}
+\item 
+struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} \mbox{\hyperlink{_disck_emu_8h_a5e906d56404d291714e22371723bd51f}{H\+DD}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_disck_emu_8h_adc3fd04a6fca4cce28b147d915be6ef5}\label{_disck_emu_8h_adc3fd04a6fca4cce28b147d915be6ef5}} 
+\index{DisckEmu.h@{DisckEmu.h}!StateDisck@{StateDisck}}
+\index{StateDisck@{StateDisck}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{StateDisck}{StateDisck}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}{State\+Disck}} \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}{State\+Disck}}}
+
+
+
+Disck\+Emu. 
+
+Disck\+Emu ist Festplatt und Funktionen dafür ,zu erstellen \begin{DoxyAuthor}{Author}
+Lhabib Lachil 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28.\+08.\+2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}\label{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}} 
+\index{DisckEmu.h@{DisckEmu.h}!StateDisck@{StateDisck}}
+\index{StateDisck@{StateDisck}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{StateDisck}{StateDisck}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331}{State\+Disck}}}
+
+
+
+Disck\+Emu. 
+
+gibt uns ob F\+AT oder I\+N\+O\+DE ist ein Partition
+
+Disck\+Emu ist Festplatt und Funktionen dafür ,zu erstellen \begin{DoxyAuthor}{Author}
+Lhabib Lachil 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28.\+08.\+2020 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAT@{FAT}!DisckEmu.h@{DisckEmu.h}}\index{DisckEmu.h@{DisckEmu.h}!FAT@{FAT}}}\mbox{\Hypertarget{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}\label{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331a5bb1a436c641e5391d9474ed95f4f56a}} 
+F\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INODE@{INODE}!DisckEmu.h@{DisckEmu.h}}\index{DisckEmu.h@{DisckEmu.h}!INODE@{INODE}}}\mbox{\Hypertarget{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331abc2dfd12ed0d4231c1edb2c6522f8c03}\label{_disck_emu_8h_a8a486ac26a5f474b8fa5be29c9769331abc2dfd12ed0d4231c1edb2c6522f8c03}} 
+I\+N\+O\+DE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 22 of file Disck\+Emu.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_disck_emu_8h_a49b081d385ef2d9d63c74f6a9465d958}\label{_disck_emu_8h_a49b081d385ef2d9d63c74f6a9465d958}} 
+\index{DisckEmu.h@{DisckEmu.h}!createHDD@{createHDD}}
+\index{createHDD@{createHDD}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{createHDD()}{createHDD()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}}$\ast$ create\+H\+DD (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_disck_emu_8c_ae39a4dedd21349d289aa9f4871d3bfa3}{create\+H\+D\+D()}}  das Erstellen von H\+D\+D-\/\+D\+I\+S\+CK 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em size} & grosse der Festplatt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zeiger auf \mbox{\hyperlink{struct_h_d_d}{H\+DD}},der wurde erstellt
+\end{DoxyReturn}
+
+
+Definition at line 3 of file Disck\+Emu.\+c.
+
+\mbox{\Hypertarget{_disck_emu_8h_ae17de01fd02cb09c821ca59f39b35c95}\label{_disck_emu_8h_ae17de01fd02cb09c821ca59f39b35c95}} 
+\index{DisckEmu.h@{DisckEmu.h}!createPartition@{createPartition}}
+\index{createPartition@{createPartition}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{createPartition()}{createPartition()}}
+{\footnotesize\ttfamily void create\+Partition (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$}]{hdd,  }\item[{char $\ast$}]{disck\+\_\+name,  }\item[{unsigned int}]{Art,  }\item[{int}]{size,  }\item[{int}]{block\+Size }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_disck_emu_8c_a528b8757d7be176a2ccb2f88adcf33af}{create\+Partition()}}  das Erstellen von \mbox{\hyperlink{struct_partitation}{Partitation}} fuer \mbox{\hyperlink{struct_h_d_d}{H\+DD}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em hdd} & zeiger auf H\+D\+D-\/\+D\+I\+S\+CK,der wurde schon erstellt \\
+\hline
+{\em name\+Parti} & Name der Partition \\
+\hline
+{\em block\+Size} & grosse der \mbox{\hyperlink{struct_block}{Block}} \\
+\hline
+{\em Art} & ob ist I\+N\+O\+DE oder F\+AT\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Disck\+Emu.\+c.
+
+\mbox{\Hypertarget{_disck_emu_8h_a268bdf529c393a4d60c84b419d268dbe}\label{_disck_emu_8h_a268bdf529c393a4d60c84b419d268dbe}} 
+\index{DisckEmu.h@{DisckEmu.h}!deleteHDD@{deleteHDD}}
+\index{deleteHDD@{deleteHDD}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{deleteHDD()}{deleteHDD()}}
+{\footnotesize\ttfamily void delete\+H\+DD (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$}]{hdd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_disck_emu_8h_aa804e37c130076cc02088aef0e5c5c8c}\label{_disck_emu_8h_aa804e37c130076cc02088aef0e5c5c8c}} 
+\index{DisckEmu.h@{DisckEmu.h}!deletePartition@{deletePartition}}
+\index{deletePartition@{deletePartition}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{deletePartition()}{deletePartition()}}
+{\footnotesize\ttfamily void delete\+Partition (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$}]{hdd,  }\item[{int}]{typ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_disck_emu_8h_a5e906d56404d291714e22371723bd51f}\label{_disck_emu_8h_a5e906d56404d291714e22371723bd51f}} 
+\index{DisckEmu.h@{DisckEmu.h}!HDD@{HDD}}
+\index{HDD@{HDD}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{HDD}{HDD}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} \mbox{\hyperlink{struct_h_d_d}{H\+DD}}}
+
+\mbox{\Hypertarget{_disck_emu_8h_af13c4c3f31f14a0ff5fd28dd5c4370f9}\label{_disck_emu_8h_af13c4c3f31f14a0ff5fd28dd5c4370f9}} 
+\index{DisckEmu.h@{DisckEmu.h}!MBR@{MBR}}
+\index{MBR@{MBR}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{MBR}{MBR}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_m_b_r}{M\+BR}} \mbox{\hyperlink{struct_m_b_r}{M\+BR}}}
+
+\mbox{\Hypertarget{_disck_emu_8h_a25ea38f57e83d0ba9d75fddbc279434f}\label{_disck_emu_8h_a25ea38f57e83d0ba9d75fddbc279434f}} 
+\index{DisckEmu.h@{DisckEmu.h}!Partition@{Partition}}
+\index{Partition@{Partition}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{Partition}{Partition}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_partitiondisck}{Partitiondisck}} Partition}
+
+\mbox{\Hypertarget{_disck_emu_8h_ad7289123e929413b0e9ac4a5cb0e1742}\label{_disck_emu_8h_ad7289123e929413b0e9ac4a5cb0e1742}} 
+\index{DisckEmu.h@{DisckEmu.h}!Superblock@{Superblock}}
+\index{Superblock@{Superblock}!DisckEmu.h@{DisckEmu.h}}
+\doxysubsubsection{\texorpdfstring{Superblock}{Superblock}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_superblock}{Superblock}} \mbox{\hyperlink{struct_superblock}{Superblock}}}
+

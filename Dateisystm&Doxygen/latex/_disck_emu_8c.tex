@@ -1,0 +1,60 @@
+\hypertarget{_disck_emu_8c}{}\doxysection{Disck\+Emu.\+c File Reference}
+\label{_disck_emu_8c}\index{DisckEmu.c@{DisckEmu.c}}
+{\ttfamily \#include \char`\"{}Disck\+Emu.\+h\char`\"{}}\newline
+Include dependency graph for Disck\+Emu.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$ \mbox{\hyperlink{_disck_emu_8c_ae39a4dedd21349d289aa9f4871d3bfa3}{create\+H\+DD}} (unsigned int size)
+\item 
+void \mbox{\hyperlink{_disck_emu_8c_a528b8757d7be176a2ccb2f88adcf33af}{create\+Partition}} (struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$hdd, char $\ast$name\+Parti, unsigned int Art, int size, int block\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_disck_emu_8c_ae39a4dedd21349d289aa9f4871d3bfa3}\label{_disck_emu_8c_ae39a4dedd21349d289aa9f4871d3bfa3}} 
+\index{DisckEmu.c@{DisckEmu.c}!createHDD@{createHDD}}
+\index{createHDD@{createHDD}!DisckEmu.c@{DisckEmu.c}}
+\doxysubsubsection{\texorpdfstring{createHDD()}{createHDD()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$ create\+H\+DD (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_disck_emu_8c_ae39a4dedd21349d289aa9f4871d3bfa3}{create\+H\+D\+D()}}  das Erstellen von H\+D\+D-\/\+D\+I\+S\+CK 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em size} & grosse der Festplatt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zeiger auf \mbox{\hyperlink{struct_h_d_d}{H\+DD}},der wurde erstellt
+\end{DoxyReturn}
+
+
+Definition at line 3 of file Disck\+Emu.\+c.
+
+\mbox{\Hypertarget{_disck_emu_8c_a528b8757d7be176a2ccb2f88adcf33af}\label{_disck_emu_8c_a528b8757d7be176a2ccb2f88adcf33af}} 
+\index{DisckEmu.c@{DisckEmu.c}!createPartition@{createPartition}}
+\index{createPartition@{createPartition}!DisckEmu.c@{DisckEmu.c}}
+\doxysubsubsection{\texorpdfstring{createPartition()}{createPartition()}}
+{\footnotesize\ttfamily void create\+Partition (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_h_d_d}{H\+DD}} $\ast$}]{hdd,  }\item[{char $\ast$}]{name\+Parti,  }\item[{unsigned int}]{Art,  }\item[{int}]{size,  }\item[{int}]{block\+Size }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_disck_emu_8c_a528b8757d7be176a2ccb2f88adcf33af}{create\+Partition()}}  das Erstellen von \mbox{\hyperlink{struct_partitation}{Partitation}} fuer \mbox{\hyperlink{struct_h_d_d}{H\+DD}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em hdd} & zeiger auf H\+D\+D-\/\+D\+I\+S\+CK,der wurde schon erstellt \\
+\hline
+{\em name\+Parti} & Name der Partition \\
+\hline
+{\em block\+Size} & grosse der \mbox{\hyperlink{struct_block}{Block}} \\
+\hline
+{\em Art} & ob ist I\+N\+O\+DE oder F\+AT\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Disck\+Emu.\+c.
+
